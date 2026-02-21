@@ -5,7 +5,7 @@ export function Navbar() {
         <div className="flex items-center gap-2">
           <span className="text-2xl">☦</span>
           <span className="tracking-wider" style={{ fontFamily: 'Cinzel, serif', fontSize: '1.25rem', fontWeight: 600 }}>
-            ORTHODOX PUBLICATIONS
+            ANDREY RUBLEV PUBLICATIONS
           </span>
         </div>
         <div className="flex gap-8" style={{ fontFamily: 'Cinzel, serif', fontSize: '0.875rem' }}>

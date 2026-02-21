@@ -19,14 +19,12 @@ export default function App() {
 
               {/* Title */}
               <h1 className="text-center mb-4" style={{ fontFamily: 'Cinzel, serif', fontSize: '3rem', fontWeight: 700, lineHeight: '1.2' }}>
-                ORTHODOX
-                <br />
-                PUBLICATION
+                LOGOS
               </h1>
 
               {/* Author */}
               <p className="text-center mb-8 text-sm tracking-widest text-gray-700" style={{ fontFamily: 'Cinzel, serif' }}>
-                BY FATHER JOHN CHRYSOSTOM
+                BY CADEN SALLADAY
               </p>
 
               {/* Decorative line */}
