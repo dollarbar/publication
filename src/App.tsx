@@ -1,5 +1,5 @@
 import { ByzantineBorder } from "./components/byzantine-border";
-import { copy } from "./lorepsum.tsx";
+import { DropCapParagraph } from "./lorepsum.tsx";
 
 export default function App() {
   return (
@@ -59,16 +59,7 @@ export default function App() {
                 From the golden mosaics of Ravenna to the intricate geometric designs of 
                 Constantinople, we trace the enduring legacy of an empire.
 
-                {copy}
-                <br />
-                <br />
-                {copy}
-                <br />
-                <br />
-                {copy}
-                <br />
-                <br />
-                {copy}
+                <DropCapParagraph />
               </p>
             </div>
           </div>

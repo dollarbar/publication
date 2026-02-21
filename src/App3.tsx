@@ -3,9 +3,9 @@ import bg_texture from '@/assets/bg_texture.png'
 import header from '@/assets/header.png';
 import { Navbar } from '@/components/Navbar.tsx';
 import { RecentPublications } from '@/components/RecentPublications.tsx';
-import { Copy, DropCapParagraph } from './lorepsum.tsx'
+import { DropCapParagraph } from './lorepsum.tsx'
 
-export default function App3() {
+export default function App() {
 
 
     return (

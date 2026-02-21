@@ -10,17 +10,23 @@ export function DropCapParagraph() {
   //const rest = children.slice(1);
 
   return (
-    <p className="text-lg leading-relaxed text-[#2b1e14]">
+    <p className="font-[EB_Garamond] text-lg leading-relaxed text-[#2b1e14]">
       <span
-        className="float-left mr-4 text-6xl leading-none"
+        className="float-left mr-2 text-6xl leading-none"
         style={{
           fontFamily: "CloisterBlack",
-          color: "#7a1f1f",
+          color: "#6b0000",
+          textShadow: "1px 1px 0 rgba(0,0,0,0.2)",
         }}
       >
         W
       </span>
         hat is Lorem Ipsum? Lorem Ipsum is simply dummy
+        text of the printing and typesetting industry. 
+        Lorem Ipsum has been the industry's standard dummy text. 
+        ever since the 1500s, when an unknown printer took a 
+        galley of type and scrambled it to make a type specimen book.
+        What is Lorem Ipsum? Lorem Ipsum is simply dummy
         text of the printing and typesetting industry. 
         Lorem Ipsum has been the industry's standard dummy text. 
         ever since the 1500s, when an unknown printer took a 

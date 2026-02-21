@@ -1,4 +1,4 @@
-export default function SlavonicBanner() {
+export default function App() {
   return (
     <section className="relative w-full overflow-hidden">
 
