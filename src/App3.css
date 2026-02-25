@@ -5,12 +5,7 @@
 */
 @custom-variant dark (&:is(.dark *));
 
-@font-face {
-  font-family: "CloisterBlack";
-  src: url("@/fonts/CloisterBlack.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
+
 
 /*
 :root {

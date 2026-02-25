@@ -4,11 +4,11 @@ export function OrnateBorder({ children }: { children: React.ReactNode }) {
       {/* Outer thick border */}
       <div className="border-[12px] border-black relative h-full">
         {/* Decorative corner flourishes */}
-        <div className="absolute top-0 left-0 text-4xl -translate-x-2 -translate-y-2">✤</div>
+        {/* <div className="absolute top-0 left-0 text-4xl -translate-x-2 -translate-y-2">✤</div>
         <div className="absolute top-0 right-0 text-4xl translate-x-2 -translate-y-2">✤</div>
         <div className="absolute bottom-0 left-0 text-4xl -translate-x-2 translate-y-2">✤</div>
         <div className="absolute bottom-0 right-0 text-4xl translate-x-2 translate-y-2">✤</div>
-
+        */}
         {/* Inner border */}
         <div className="border-4 border-black m-4 relative">
           {/* Side decorative elements */}
