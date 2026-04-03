@@ -1,5 +1,6 @@
-import { OrnateBorder } from "../components/OrnateBorder";
+import { OrnateBorder } from "../components/OrnateBorder2";
 import { useState } from "react";
+import MainSeal from "@/components/MainSeal";
 
 const articlesByMonth = [
   {
@@ -119,7 +120,7 @@ export default function Articles() {
           <div className="max-w-6xl mx-auto">
             {/* Page Header */}
             <div className="flex justify-center mb-8">
-              <div className="text-6xl">☦</div>
+              <MainSeal />
             </div>
 
             <h1 className="text-center mb-4" style={{ fontFamily: 'Cinzel, serif', fontSize: '3rem', fontWeight: 700, lineHeight: '1.2' }}>

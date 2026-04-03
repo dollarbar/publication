@@ -6,7 +6,7 @@ injectIntoGlobalHook(window);
 window.$RefreshReg$ = () => {};
 window.$RefreshSig$ = () => (type) => type;</script>
 
-    <script type="module" src="publication_files/client.es"></script>
+    <script type="module" src="front_files/client.es"></script>
 
     <meta charset="UTF-8">
     <link rel="icon" type="image/svg+xml" href="http://localhost:5174/vite.svg">
@@ -32,6 +32,7 @@ window.$RefreshSig$ = () => (type) => type;</script>
       "Courier New", monospace;
     --color-gray-100: oklch(96.7% 0.003 264.542);
     --color-gray-300: oklch(87.2% 0.01 258.338);
+    --color-gray-400: oklch(70.7% 0.022 261.325);
     --color-gray-500: oklch(55.1% 0.027 264.364);
     --color-gray-600: oklch(44.6% 0.03 256.802);
     --color-gray-700: oklch(37.3% 0.034 259.733);
@@ -262,6 +263,9 @@ window.$RefreshSig$ = () => (type) => type;</script>
   .relative {
     position: relative;
   }
+  .sticky {
+    position: sticky;
+  }
   .inset-0 {
     inset: calc(var(--spacing) * 0);
   }
@@ -288,6 +292,9 @@ window.$RefreshSig$ = () => (type) => type;</script>
   }
   .top-4 {
     top: calc(var(--spacing) * 4);
+  }
+  .top-8 {
+    top: calc(var(--spacing) * 8);
   }
   .top-16 {
     top: calc(var(--spacing) * 16);
@@ -367,6 +374,12 @@ window.$RefreshSig$ = () => (type) => type;</script>
   .z-\[1\] {
     z-index: 1;
   }
+  .col-span-3 {
+    grid-column: span 3 / span 3;
+  }
+  .col-span-9 {
+    grid-column: span 9 / span 9;
+  }
   .col-start-2 {
     grid-column-start: 2;
   }
@@ -403,8 +416,14 @@ window.$RefreshSig$ = () => (type) => type;</script>
   .my-1 {
     margin-block: calc(var(--spacing) * 1);
   }
+  .my-8 {
+    margin-block: calc(var(--spacing) * 8);
+  }
   .-mt-4 {
     margin-top: calc(var(--spacing) * -4);
+  }
+  .mt-1 {
+    margin-top: calc(var(--spacing) * 1);
   }
   .mt-1\.5 {
     margin-top: calc(var(--spacing) * 1.5);
@@ -444,6 +463,9 @@ window.$RefreshSig$ = () => (type) => type;</script>
   }
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
+  }
+  .mb-6 {
+    margin-bottom: calc(var(--spacing) * 6);
   }
   .mb-8 {
     margin-bottom: calc(var(--spacing) * 8);
@@ -563,6 +585,9 @@ window.$RefreshSig$ = () => (type) => type;</script>
   .h-5 {
     height: calc(var(--spacing) * 5);
   }
+  .h-6 {
+    height: calc(var(--spacing) * 6);
+  }
   .h-7 {
     height: calc(var(--spacing) * 7);
   }
@@ -580,6 +605,9 @@ window.$RefreshSig$ = () => (type) => type;</script>
   }
   .h-16 {
     height: calc(var(--spacing) * 16);
+  }
+  .h-20 {
+    height: calc(var(--spacing) * 20);
   }
   .h-\[1\.15rem\] {
     height: 1.15rem;
@@ -659,6 +687,9 @@ window.$RefreshSig$ = () => (type) => type;</script>
   .w-5 {
     width: calc(var(--spacing) * 5);
   }
+  .w-6 {
+    width: calc(var(--spacing) * 6);
+  }
   .w-8 {
     width: calc(var(--spacing) * 8);
   }
@@ -668,8 +699,14 @@ window.$RefreshSig$ = () => (type) => type;</script>
   .w-16 {
     width: calc(var(--spacing) * 16);
   }
+  .w-20 {
+    width: calc(var(--spacing) * 20);
+  }
   .w-24 {
     width: calc(var(--spacing) * 24);
+  }
+  .w-32 {
+    width: calc(var(--spacing) * 32);
   }
   .w-64 {
     width: calc(var(--spacing) * 64);
@@ -886,6 +923,9 @@ window.$RefreshSig$ = () => (type) => type;</script>
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
+  .grid-cols-12 {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
   .grid-cols-\[0_1fr\] {
     grid-template-columns: 0 1fr;
   }
@@ -973,6 +1013,13 @@ window.$RefreshSig$ = () => (type) => type;</script>
       margin-block-end: calc(calc(var(--spacing) * 6) * calc(1 - var(--tw-space-y-reverse)));
     }
   }
+  .space-y-8 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 8) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 8) * calc(1 - var(--tw-space-y-reverse)));
+    }
+  }
   .space-x-1 {
     :where(& > :not(:last-child)) {
       --tw-space-x-reverse: 0;
@@ -1003,6 +1050,9 @@ window.$RefreshSig$ = () => (type) => type;</script>
   }
   .overflow-y-auto {
     overflow-y: auto;
+  }
+  .rounded {
+    border-radius: 0.25rem;
   }
   .rounded-\[2px\] {
     border-radius: 2px;
@@ -1040,6 +1090,10 @@ window.$RefreshSig$ = () => (type) => type;</script>
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
+  }
+  .border-2 {
+    border-style: var(--tw-border-style);
+    border-width: 2px;
   }
   .border-4 {
     border-style: var(--tw-border-style);
@@ -1216,6 +1270,9 @@ window.$RefreshSig$ = () => (type) => type;</script>
   .bg-gray-100 {
     background-color: var(--color-gray-100);
   }
+  .bg-gray-300 {
+    background-color: var(--color-gray-300);
+  }
   .bg-input-background {
     background-color: var(--input-background);
   }
@@ -1254,6 +1311,12 @@ window.$RefreshSig$ = () => (type) => type;</script>
   }
   .bg-white {
     background-color: var(--color-white);
+  }
+  .bg-white\/50 {
+    background-color: color-mix(in srgb, #fff 50%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-white) 50%, transparent);
+    }
   }
   .bg-cover {
     background-size: cover;
@@ -1395,6 +1458,9 @@ window.$RefreshSig$ = () => (type) => type;</script>
   }
   .pr-8 {
     padding-right: calc(var(--spacing) * 8);
+  }
+  .pb-1 {
+    padding-bottom: calc(var(--spacing) * 1);
   }
   .pb-2 {
     padding-bottom: calc(var(--spacing) * 2);
@@ -1587,6 +1653,9 @@ window.$RefreshSig$ = () => (type) => type;</script>
   }
   .text-foreground {
     color: var(--foreground);
+  }
+  .text-gray-400 {
+    color: var(--color-gray-400);
   }
   .text-gray-500 {
     color: var(--color-gray-500);
@@ -2218,6 +2287,13 @@ window.$RefreshSig$ = () => (type) => type;</script>
       z-index: 20;
     }
   }
+  .hover\:border-gray-500 {
+    &:hover {
+      @media (hover: hover) {
+        border-color: var(--color-gray-500);
+      }
+    }
+  }
   .hover\:bg-\[\#6f2417\] {
     &:hover {
       @media (hover: hover) {
@@ -2325,6 +2401,13 @@ window.$RefreshSig$ = () => (type) => type;</script>
     &:hover {
       @media (hover: hover) {
         color: var(--color-gray-300);
+      }
+    }
+  }
+  .hover\:text-gray-600 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-gray-600);
       }
     }
   }
@@ -4781,32 +4864,19 @@ window.$RefreshSig$ = () => (type) => type;</script>
 }
 </style></head>
   <body>
-    <div id="root"><div class="min-h-screen bg-[#f5f1e8] flex flex-col"><nav class="w-full bg-black text-white py-4 px-8"><div class="max-w-6xl mx-auto flex items-center justify-between"><div class="flex items-center gap-2"><span class="text-2xl">☦</span><span class="tracking-wider" style="font-family: Cinzel, serif; font-size: 1.25rem; font-weight: 600;">ANDREY RUBLEV PUBLICATIONS</span></div><div class="flex gap-8" style="font-family: Cinzel, serif; font-size: 0.875rem;"><a href="#" class="hover:text-gray-300 transition-colors tracking-wide">HOME</a><a href="#" class="hover:text-gray-300 transition-colors tracking-wide">ARTICLES</a><a href="#" class="hover:text-gray-300 transition-colors tracking-wide">ARCHIVES</a><a href="#" class="hover:text-gray-300 transition-colors tracking-wide">ABOUT</a></div></div></nav><div class="flex-1 flex"><div class="relative w-full h-full bg-white flex-1 p-8"><div class="relative h-full" style="border-style: solid; border-width: 40px; border-image-source: url(&quot;/src/assets/border.png&quot;); border-image-slice: 40; border-image-repeat: repeat; border-image-width: 40px;"><div class="p-12"><div class="grid grid-cols-1 lg:grid-cols-3 gap-8"><div class="lg:col-span-2"><div class="flex justify-center mb-8"><div class="text-6xl">☦</div></div><h1 class="text-center mb-4" style="font-family: Cinzel, serif; font-size: 3rem; font-weight: 700; line-height: 1.2;">LOGOS</h1><p class="text-center mb-8 text-sm tracking-widest text-gray-700" style="font-family: Cinzel, serif;">BY CADEN SALLADAY</p><div class="flex items-center justify-center mb-8"><div class="h-px bg-black w-24"></div><div class="mx-4 text-2xl">✦</div><div class="h-px bg-black w-24"></div></div><p class="text-center mb-12 text-lg tracking-widest" style="font-family: Cinzel, serif;">IN NOMINE PATRIS</p><p class="font-[EB_Garamond] text-lg leading-relaxed text-[#2b1e14]"><span class="float-left mr-2 text-6xl leading-none" style="font-family: CloisterBlack; color: rgb(107, 0, 0); text-shadow: rgba(0, 0, 0, 0.2) 1px 1px 0px;">W</span>hat
- is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and 
-typesetting industry. Lorem Ipsum has been the industry's standard dummy
- text. ever since the 1500s, when an unknown printer took a galley of 
-type and scrambled it to make a type specimen book. What is Lorem Ipsum?
- Lorem Ipsum is simply dummy text of the printing and typesetting 
-industry. Lorem Ipsum has been the industry's standard dummy text. ever 
-since the 1500s, when an unknown printer took a galley of type and 
-scrambled it to make a type specimen book.<br><br>What is Lorem Ipsum? 
-Lorem Ipsum is simply dummy text of the printing and typesetting 
-industry. Lorem Ipsum has been the industry's standard dummy text. ever 
-since the 1500s, when an unknown printer took a galley of type and 
-scrambled it to make a type specimen book.<br><br>What is Lorem Ipsum? 
-Lorem Ipsum is simply dummy text of the printing and typesetting 
-industry. Lorem Ipsum has been the industry's standard dummy text. ever 
-since the 1500s, when an unknown printer took a galley of type and 
-scrambled it to make a type specimen book.<br><br>What is Lorem Ipsum? 
-Lorem Ipsum is simply dummy text of the printing and typesetting 
-industry. Lorem Ipsum has been the industry's standard dummy text. ever 
-since the 1500s, when an unknown printer took a galley of type and 
-scrambled it to make a type specimen book.<br><br>What is Lorem Ipsum? 
-Lorem Ipsum is simply dummy text of the printing and typesetting 
-industry. Lorem Ipsum has been the industry's standard dummy text. ever 
-since the 1500s, when an unknown printer took a galley of type and 
-scrambled it to make a type specimen book.<br><br></p><p class="text-left mt-8 text-xs text-gray-500" style="font-family: EB Garamond, serif;">Holy Bible. (2026). <i>John</i> 1:1-10.</p><div class="flex items-center justify-center mt-12"><div class="h-px bg-black w-16"></div><div class="mx-4 text-xl">✦</div><div class="h-px bg-black w-16"></div></div><p class="text-center mt-8 text-sm tracking-widest" style="font-family: Cinzel, serif;">ANNO DOMINI MMXXVI</p><div class="flex items-center justify-center mt-6 gap-4"><button class="text-gray-600 hover:text-black transition-colors" aria-label="Previous page"><span class="text-xl">←</span></button><p class="text-xs tracking-wider text-gray-600" style="font-family: Cinzel, serif;">PAGES 1-3</p><button class="text-gray-600 hover:text-black transition-colors" aria-label="Next page"><span class="text-xl">→</span></button></div></div><div class="lg:col-span-1 pl-8"><h2 class="text-center mb-4 border-b-2 border-black pb-2" style="font-family: Cinzel, serif; font-size: 1rem; font-weight: 600; letter-spacing: 0.1em;">RECENT<br>PUBLICATIONS</h2><div class="space-y-4"><div class="border-b border-gray-300 pb-3"><div class="text-center mb-1 text-xl">✦</div><h3 class="mb-1 text-center" style="font-family: Cinzel, serif; font-size: 0.75rem; font-weight: 600;">THE DIVINE LITURGY</h3><p class="text-xs text-center text-gray-600" style="font-family: Cinzel, serif;">February 2026</p></div><div class="border-b border-gray-300 pb-3"><div class="text-center mb-1 text-xl">✦</div><h3 class="mb-1 text-center" style="font-family: Cinzel, serif; font-size: 0.75rem; font-weight: 600;">LIVES OF THE SAINTS</h3><p class="text-xs text-center text-gray-600" style="font-family: Cinzel, serif;">January 2026</p></div><div class="pb-3"><div class="text-center mb-1 text-xl">✦</div><h3 class="mb-1 text-center" style="font-family: Cinzel, serif; font-size: 0.75rem; font-weight: 600;">THEOLOGICAL ESSAYS</h3><p class="text-xs text-center text-gray-600" style="font-family: Cinzel, serif;">December 2025</p></div></div></div></div></div></div></div></div></div></div>
-    <script type="module" src="publication_files/main.es"></script>
+    <div id="root"><div class="min-h-screen bg-[#f5f1e8] flex flex-col"><nav class="w-full bg-black text-white py-4 px-8"><div class="max-w-6xl mx-auto flex items-center justify-between"><div class="flex items-center gap-2"><img class="w-6 h-6 object-contain" src="front_files/Rublev_Seal_white.svg"><span class="tracking-wider" style="font-family: Cinzel, serif; font-size: 1.25rem; font-weight: 600;">ANDREY RUBLEV PUBLICATIONS</span></div><div class="flex gap-8" style="font-family: Cinzel, serif; font-size: 0.875rem;"><a class="hover:text-gray-300 transition-colors tracking-wide active" href="http://localhost:5174/" data-discover="true" aria-current="page">Home</a><a class="hover:text-gray-300 transition-colors tracking-wide" href="http://localhost:5174/articles" data-discover="true">ARTICLES</a><a class="hover:text-gray-300 transition-colors tracking-wide" href="http://localhost:5174/archives" data-discover="true">ARCHIVES</a><a class="hover:text-gray-300 transition-colors tracking-wide" href="http://localhost:5174/about" data-discover="true">ABOUT</a></div></div></nav><div class="min-h-screen bg-[#f5f1e8] flex flex-col"><div class="flex-1 flex"><div class="relative w-full h-full bg-white flex-1 p-8"><div class="relative h-full" style="border-style: solid; border-width: 30px; border-image-source: url(&quot;/src/assets/transparent.png&quot;); border-image-slice: 150; border-image-repeat: repeat; border-image-width: 30px;"><div class="p-12"><div class="grid grid-cols-1 lg:grid-cols-3 gap-8"><div class="lg:col-span-2 relative"><div class="absolute top-0 left-0"><p class="text-xs tracking-wider text-gray-600" style="font-family: Cinzel, serif;">PAGE 1</p></div><div class="flex justify-center mb-8"><div><img class="w-20 h-20" src="front_files/Rublev_Seal_3-21-26.png"></div></div><h1 class="text-center mb-4" style="font-family: Cinzel, serif; font-size: 3rem; font-weight: 700; line-height: 1.2;">ORTHODOX<br>PUBLICATION</h1><p class="text-center mb-8 text-sm tracking-widest text-gray-700" style="font-family: Cinzel, serif;">BY FATHER JOHN CHRYSOSTOM</p><div class="flex items-center justify-center mb-8"><div class="h-px bg-black w-24"></div><div class="mx-4 text-2xl">✦</div><div class="h-px bg-black w-24"></div></div><p class="text-center mb-12 text-lg tracking-widest" style="font-family: Cinzel, serif;">IN NOMINE PATRIS</p><div class="space-y-6" style="font-family: EB Garamond, serif; font-size: 1.125rem; line-height: 1.8;"><p class="first-letter:text-6xl first-letter:font-bold first-letter:float-left first-letter:mr-3 first-letter:mt-1" style="font-family: EB Garamond, serif;">In
+ the beginning was the Word, and the Word was with God, and the Word was
+ God. The same was in the beginning with God. All things were made by 
+him; and without him was not any thing made that was made. In him was 
+life; and the life was the light of men.</p><p style="font-family: EB Garamond, serif;">And
+ the light shineth in darkness; and the darkness comprehended it not. 
+There was a man sent from God, whose name was John. The same came for a 
+witness, to bear witness of the Light, that all men through him might 
+believe.</p><p style="font-family: EB Garamond, serif;">He was not that 
+Light, but was sent to bear witness of that Light. That was the true 
+Light, which lighteth every man that cometh into the world. He was in 
+the world, and the world was made by him, and the world knew him not.</p></div><p class="text-left mt-8 text-xs text-gray-500" style="font-family: EB Garamond, serif;">Holy Bible. (2026). <i>John</i> 1:1-10.</p><div class="flex items-center justify-center mt-12"><div class="h-px bg-black w-16"></div><div class="mx-4 text-xl">✦</div><div class="h-px bg-black w-16"></div></div><p class="text-center mt-8 text-sm tracking-widest" style="font-family: Cinzel, serif;">ANNO DOMINI MMXXVI</p><div class="flex items-center justify-center mt-6 gap-4"><button class="text-gray-600 hover:text-black transition-colors" aria-label="Previous page"><span class="text-xl">←</span></button><p class="text-xs tracking-wider text-gray-600" style="font-family: Cinzel, serif;">PAGES 1-3</p><button class="text-gray-600 hover:text-black transition-colors" aria-label="Next page"><span class="text-xl">→</span></button></div></div><div class="lg:col-span-1 pl-8"><h2 class="text-center mb-4 border-b-2 border-black pb-2" style="font-family: Cinzel, serif; font-size: 1rem; font-weight: 600; letter-spacing: 0.1em;">RECENT<br>PUBLICATIONS</h2><div class="space-y-4"><div class="border-b border-gray-300 pb-3"><div class="text-center mb-1 text-xl">✦</div><h3 class="mb-1 text-center" style="font-family: Cinzel, serif; font-size: 0.75rem; font-weight: 600;">THE DIVINE LITURGY</h3><p class="text-xs text-center text-gray-600" style="font-family: Cinzel, serif;">February 2026</p></div><div class="border-b border-gray-300 pb-3"><div class="text-center mb-1 text-xl">✦</div><h3 class="mb-1 text-center" style="font-family: Cinzel, serif; font-size: 0.75rem; font-weight: 600;">LIVES OF THE SAINTS</h3><p class="text-xs text-center text-gray-600" style="font-family: Cinzel, serif;">January 2026</p></div><div class="pb-3"><div class="text-center mb-1 text-xl">✦</div><h3 class="mb-1 text-center" style="font-family: Cinzel, serif; font-size: 0.75rem; font-weight: 600;">THEOLOGICAL ESSAYS</h3><p class="text-xs text-center text-gray-600" style="font-family: Cinzel, serif;">December 2025</p></div></div></div></div></div></div></div></div></div></div></div>
+    <script type="module" src="front_files/main.tsx"></script>
   
 
 </body></html>

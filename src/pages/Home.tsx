@@ -1,4 +1,6 @@
 import { OrnateBorder } from "@/components/OrnateBorder2";
+//import Seal from "@/assets/Rublev_Seal_3-21-26.png";
+import MainSeal from "@/components/MainSeal";
 
 export default function Home() {
   return (
@@ -18,7 +20,8 @@ export default function Home() {
 
               {/* Ornamental top */}
               <div className="flex justify-center mb-8">
-                <div className="text-6xl">☦</div>
+                <MainSeal />
+                  
               </div>
 
               {/* Title */}

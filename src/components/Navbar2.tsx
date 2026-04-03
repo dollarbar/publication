@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-
+import seal from "@/assets/Rublev_Seal_white.svg";
 
 
 
@@ -8,7 +8,10 @@ export function Navbar() {
     <nav className="w-full bg-black text-white py-4 px-8">
       <div className="max-w-6xl mx-auto flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <span className="text-2xl">☦</span>
+          <img
+            src={seal}
+            className="w-6 h-6 object-contain"
+          />
           <span className="tracking-wider" style={{ fontFamily: 'Cinzel, serif', fontSize: '1.25rem', fontWeight: 600 }}>
             ANDREY RUBLEV PUBLICATIONS
           </span>

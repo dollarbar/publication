@@ -1,4 +1,5 @@
-import { OrnateBorder } from "../components/OrnateBorder";
+import { OrnateBorder } from "../components/OrnateBorder2";
+import MainSeal from "@/components/MainSeal"
 
 export default function About() {
   return (
@@ -9,7 +10,7 @@ export default function About() {
           <div className="max-w-4xl mx-auto">
             {/* Page Header */}
             <div className="flex justify-center mb-8">
-              <div className="text-6xl">☦</div>
+              <MainSeal />
             </div>
 
             <h1 className="text-center mb-4" style={{ fontFamily: 'Cinzel, serif', fontSize: '3rem', fontWeight: 700, lineHeight: '1.2' }}>

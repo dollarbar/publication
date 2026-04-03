@@ -1,4 +1,4 @@
-import borderImage from "@/assets/border.png";
+import borderImage from "@/assets/transparent.png";
 
 export function OrnateBorder({ children }: { children: React.ReactNode }) {
   return (
@@ -8,11 +8,11 @@ export function OrnateBorder({ children }: { children: React.ReactNode }) {
         className="relative h-full"
         style={{
           borderStyle: 'solid',
-          borderWidth: '40px',
+          borderWidth: '30px',
           borderImageSource: `url(${borderImage})`,
-          borderImageSlice: '40',
+          borderImageSlice: '150',
           borderImageRepeat: 'repeat',
-          borderImageWidth: '40px'
+          borderImageWidth: '30px'
         }}
       >
         {/* Content wrapper */}
