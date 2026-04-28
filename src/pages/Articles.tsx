@@ -1,6 +1,7 @@
-import { OrnateBorder } from "../components/OrnateBorder2";
+import { OrnateBorder } from "../components/OrnateBorder";
 import { useState } from "react";
 import MainSeal from "@/components/MainSeal";
+import WaxSeal from "@/components/WaxSeal";
 
 const articlesByMonth = [
   {
@@ -119,10 +120,10 @@ export default function Articles() {
         <OrnateBorder>
           <div className="max-w-6xl mx-auto">
             {/* Page Header */}
-            <div className="flex justify-center mb-8">
-              <MainSeal />
+            {/*<div className="flex justify-center mb-8">
+              <MainSeal size="w-20 h-20" color="red"/>
             </div>
-
+            */}
             <h1 className="text-center mb-4" style={{ fontFamily: 'Cinzel, serif', fontSize: '3rem', fontWeight: 700, lineHeight: '1.2' }}>
               PREVIOUS
               <br />
@@ -131,16 +132,17 @@ export default function Articles() {
 
             {/* Decorative line */}
             <div className="flex items-center justify-center mb-12">
-              <div className="h-px bg-black w-24"></div>
+              <div className="black-rule w-24"></div>
               <div className="mx-4 text-2xl">✦</div>
-              <div className="h-px bg-black w-24"></div>
+              <div className="black-rule w-24"></div>
+              {/* <div className="red-rule w-24"></div> */}
             </div>
 
             {/* Two Column Layout: Months Sidebar + Preview Area */}
             <div className="grid grid-cols-12 gap-8 mb-12">
               {/* Left Sidebar - Months */}
               <div className="col-span-3">
-                <h2 className="text-center mb-6 pb-2 border-b-2 border-black" style={{ fontFamily: 'Cinzel, serif', fontSize: '1rem', fontWeight: 600, letterSpacing: '0.1em' }}>
+                <h2 className="text-center mb-6 pb-2 border-b" style={{ fontFamily: 'Cinzel, serif', fontSize: '1rem', fontWeight: 600, letterSpacing: '0.1em' }}>
                   ARCHIVE
                 </h2>
                 <div className="space-y-2">
@@ -149,12 +151,19 @@ export default function Articles() {
                       key={monthData.month}
                       onMouseEnter={() => setHoveredMonth(monthData.month)}
                       className={`p-3 cursor-pointer transition-all border-l-4 ${
-                        hoveredMonth === monthData.month 
-                          ? 'border-black bg-white shadow-md' 
-                          : 'border-gray-300 hover:border-gray-500'
+                        hoveredMonth === monthData.month
+                          ? 'border-[#8b0000] bg-white shadow-md'
+                          : 'border-gray-300 hover:border-[#8b0000]/50'
                       }`}
                     >
-                      <div className="text-center text-xs">✦</div>
+                      <div 
+                        className={`
+                          ${hoveredMonth === monthData.month
+                            ? 'text-center text-xs text-[#8b0000]'
+                            : 'text-center text-xs>'
+                          }`}
+                        >✦
+                      </div>
                       <p className="text-center text-xs mt-1" style={{ fontFamily: 'Cinzel, serif', fontWeight: hoveredMonth === monthData.month ? 600 : 400 }}>
                         {monthData.month}
                       </p>
@@ -192,7 +201,7 @@ export default function Articles() {
                           <p className="text-center mb-4 text-xs tracking-widest text-gray-600" style={{ fontFamily: 'Cinzel, serif' }}>
                             {article.author}
                           </p>
-                          <p className="text-center mb-4 text-xs text-gray-500" style={{ fontFamily: 'Cinzel, serif' }}>
+                          <p className="text-center mb-4 text-xs" style={{ fontFamily: 'Cinzel, serif' }}>
                             {article.date}
                           </p>
 
@@ -211,7 +220,7 @@ export default function Articles() {
 
                           {/* Read More */}
                           <div className="text-center mt-6">
-                            <button className="text-xs tracking-widest hover:text-gray-600 transition-colors border-b border-black pb-1" style={{ fontFamily: 'Cinzel, serif' }}>
+                            <button className="text-xs tracking-widest transition-colors border-b pb-1 hover:text-[#8b0000] hover:border-[#8b0000]" style={{ fontFamily: 'Cinzel, serif' }}>
                               READ FULL ARTICLE →
                             </button>
                           </div>
@@ -233,15 +242,16 @@ export default function Articles() {
 
             {/* Bottom decorative element */}
             <div className="flex items-center justify-center mt-8">
-              <div className="h-px bg-black w-16"></div>
-              <div className="mx-4 text-xl">✦</div>
-              <div className="h-px bg-black w-16"></div>
+              {/* <div className="black-rule w-16"></div> */}
+              {/* <div className="mx-4 text-xl">✦</div> */}
+              {/* <div className="black-rule w-16"></div> */}
+              
             </div>
-
+            <div className="flex items-center justify-center mb-4">
+              <WaxSeal />
+            </div>
             {/* Footer */}
-            <p className="text-center mt-6 text-sm tracking-widest" style={{ fontFamily: 'Cinzel, serif' }}>
-              ANNO DOMINI MMXXVI
-            </p>
+            
           </div>
         </OrnateBorder>
       </div>

@@ -1,5 +1,5 @@
-import { OrnateBorder } from "../components/OrnateBorder2";
-import MainSeal from "@/components/MainSeal"
+import { OrnateBorder } from "../components/OrnateBorder";
+//import MainSeal from "@/components/MainSeal"
 
 export default function About() {
   return (
@@ -9,10 +9,11 @@ export default function About() {
         <OrnateBorder>
           <div className="max-w-4xl mx-auto">
             {/* Page Header */}
+            {/*
             <div className="flex justify-center mb-8">
               <MainSeal />
             </div>
-
+            */}
             <h1 className="text-center mb-4" style={{ fontFamily: 'Cinzel, serif', fontSize: '3rem', fontWeight: 700, lineHeight: '1.2' }}>
               ABOUT
               <br />
@@ -21,16 +22,16 @@ export default function About() {
 
             {/* Decorative line */}
             <div className="flex items-center justify-center mb-12">
-              <div className="h-px bg-black w-24"></div>
+              <div className="black-rule w-24"></div>
               <div className="mx-4 text-2xl">✦</div>
-              <div className="h-px bg-black w-24"></div>
+              <div className="black-rule w-24"></div>
             </div>
 
             {/* Main Content */}
             <div className="space-y-8" style={{ fontFamily: 'EB Garamond, serif', fontSize: '1.125rem', lineHeight: '1.8' }}>
               {/* Mission Section */}
               <div>
-                <h2 className="text-center mb-4" style={{ fontFamily: 'Cinzel, serif', fontSize: '1.5rem', fontWeight: 600, letterSpacing: '0.05em' }}>
+                <h2 className="text-center mb-4 crimson-heading" style={{ fontFamily: 'Cinzel, serif', fontSize: '1.5rem', fontWeight: 600, letterSpacing: '0.05em' }}>
                   OUR MISSION
                 </h2>
                 <div className="text-center mb-4 text-xl">✦</div>
@@ -44,12 +45,12 @@ export default function About() {
 
               {/* Divider */}
               <div className="flex items-center justify-center my-8">
-                <div className="h-px bg-gray-300 w-32"></div>
+                <div className="black-rule w-32"></div>
               </div>
 
               {/* History Section */}
               <div>
-                <h2 className="text-center mb-4" style={{ fontFamily: 'Cinzel, serif', fontSize: '1.5rem', fontWeight: 600, letterSpacing: '0.05em' }}>
+                <h2 className="text-center mb-4 crimson-heading" style={{ fontFamily: 'Cinzel, serif', fontSize: '1.5rem', fontWeight: 600, letterSpacing: '0.05em' }}>
                   OUR HISTORY
                 </h2>
                 <div className="text-center mb-4 text-xl">✦</div>
@@ -63,7 +64,7 @@ export default function About() {
 
               {/* Divider */}
               <div className="flex items-center justify-center my-8">
-                <div className="h-px bg-gray-300 w-32"></div>
+                <div className="black-rule w-32"></div>
               </div>
 
               {/* Editorial Board */}
@@ -106,12 +107,12 @@ export default function About() {
 
               {/* Divider */}
               <div className="flex items-center justify-center my-8">
-                <div className="h-px bg-gray-300 w-32"></div>
+                <div className="black-rule w-32"></div>
               </div>
 
               {/* Contact */}
               <div>
-                <h2 className="text-center mb-4" style={{ fontFamily: 'Cinzel, serif', fontSize: '1.5rem', fontWeight: 600, letterSpacing: '0.05em' }}>
+                <h2 className="text-center mb-4 crimson-heading" style={{ fontFamily: 'Cinzel, serif', fontSize: '1.5rem', fontWeight: 600, letterSpacing: '0.05em' }}>
                   CONTACT US
                 </h2>
                 <div className="text-center mb-4 text-xl">✦</div>
@@ -128,9 +129,9 @@ export default function About() {
 
             {/* Bottom decorative element */}
             <div className="flex items-center justify-center mt-12">
-              <div className="h-px bg-black w-16"></div>
+              <div className="black-rule w-16"></div>
               <div className="mx-4 text-xl">✦</div>
-              <div className="h-px bg-black w-16"></div>
+              <div className="black-rule w-16"></div>
             </div>
 
             {/* Footer */}

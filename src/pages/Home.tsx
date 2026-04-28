@@ -1,6 +1,6 @@
-import { OrnateBorder } from "@/components/OrnateBorder2";
-//import Seal from "@/assets/Rublev_Seal_3-21-26.png";
-import MainSeal from "@/components/MainSeal";
+import { OrnateBorder } from "@/components/OrnateBorder";
+import WaxSeal from "@/components/WaxSeal";
+import IRedSvg from "@/lib/alphabet/I_red.svg";
 
 export default function Home() {
   return (
@@ -11,41 +11,18 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Main content - left side */}
             <div className="lg:col-span-2 relative">
-              {/* Page Number - Top Left
-              <div className="absolute top-0 left-0">
-                <p className="text-xs tracking-wider text-gray-600" style={{ fontFamily: 'Cinzel, serif' }}>
-                  PAGE 1
-                </p>
-              </div>
-              */}
-              {/* Ornamental top */}
-              {/*
-              <div className="flex justify-center mb-8">
-                <MainSeal />
-                  
-              </div>
-              */}
 
               {/* Title */}
               
-                <h1 className="mb-4" style={{ fontFamily: 'Cinzel, serif', fontSize: '3rem', fontWeight: 700, lineHeight: '1.2' }}>
-                  THE IDIOT
-                </h1>
+              <h1 className="mb-4" style={{ fontFamily: 'Cinzel, serif', fontSize: '3rem', fontWeight: 700, lineHeight: '1.2' }}>
+                THE IDIOT
+              </h1>
 
-                {/* Author */}
-                <p className="ml-6 mb-8 text-sm tracking-widest text-gray-700" style={{ fontFamily: 'Cinzel, serif' }}>
-                  BY RUBLEV PUBLICATIONS
-                </p>
+              {/* Author */}
+              <p className="ml-6 mb-8 text-sm tracking-widest" style={{ fontFamily: 'Cinzel, serif' }}>
+                BY RUBLEV PUBLICATIONS
+              </p>
               
-
-              {/* Decorative line */}
-              {/*
-              <div className="flex items-center justify-center mb-8">
-                <div className="h-px bg-black w-24"></div>
-                <div className="mx-4 text-2xl">✦</div>
-                <div className="h-px bg-black w-24"></div>
-              </div>
-              */}
               {/* Subtitle */}
               <p className="text-center mt-12 mb-12 text-lg tracking-widest" style={{ fontFamily: 'Cinzel, serif' }}>
                 INTRODUCTION TO PURPOSE
@@ -53,8 +30,9 @@ export default function Home() {
 
               {/* Body text */}
               <div className="space-y-6" style={{ fontFamily: 'EB Garamond, serif', fontSize: '1.125rem', lineHeight: '1.8' }}>
-                <p className="first-letter:text-6xl first-letter:font-bold first-letter:float-left first-letter:mr-3 first-letter:mt-1" style={{ fontFamily: 'EB Garamond, serif' }}>
-                  In the beginning was the Word, and the Word was with God, and the Word was God. The same was in the beginning with God. All things were made by him; and without him was not any thing made that was made. In him was life; and the life was the light of men.
+                <p style={{ fontFamily: 'EB Garamond, serif' }}>
+                  <img src={IRedSvg} className="float-left h-16 -mr-4 w-auto" alt="I" />
+                  n the beginning was the Word, and the Word was with God, and the Word was God. The same was in the beginning with God. All things were made by him; and without him was not any thing made that was made. In him was life; and the life was the light of men.
                 </p>
                 
                 <p style={{ fontFamily: 'EB Garamond, serif' }}>
@@ -72,40 +50,27 @@ export default function Home() {
               </p>
 
               {/* Bottom decorative element */}
-              {/*
-              <div className="flex items-center justify-center mt-12">
-                <div className="h-px bg-black w-16"></div>
-                <div className="mx-4 text-xl">✦</div>
-                <div className="h-px bg-black w-16"></div>
-              </div>
-              */}
-
-              {/* Footer */}
-              {/*<p className="text-center mt-8 text-sm tracking-widest" style={{ fontFamily: 'Cinzel, serif' }}>
-                ANNO DOMINI MMXXVI
-              </p>
-              */}
               <div className="flex justify-center mb-5">
-                <MainSeal />
+                <WaxSeal size={"w-20 h-20"} />
                   
               </div>
               {/* Pages */}
               <div className="flex items-center justify-center mt-2 gap-4">
-                <button className="text-gray-600 hover:text-black transition-colors" aria-label="Previous page">
+                <button className="text-gray-500 hover:text-[#8b0000] transition-colors" aria-label="Previous page">
                   <span className="text-xl">←</span>
                 </button>
                 <p className="text-xs tracking-wider text-gray-600" style={{ fontFamily: 'Cinzel, serif' }}>
                   PAGES 1-3
                 </p>
-                <button className="text-gray-600 hover:text-black transition-colors" aria-label="Next page">
+                <button className="text-gray-500 hover:text-[#8b0000] transition-colors" aria-label="Next page">
                   <span className="text-xl">→</span>
                 </button>
               </div>
             </div>
 
             {/* Recent publications - right side */}
-            <div className="lg:col-span-1 pl-8">
-              <h2 className="text-center mb-4 border-b-2 border-black pb-2" style={{ fontFamily: 'Cinzel, serif', fontSize: '1rem', fontWeight: 600, letterSpacing: '0.1em' }}>
+            <div className="lg:col-span-1">
+              <h2 className="text-center mb-4 border-b pb-2" style={{ fontFamily: 'Cinzel, serif', fontSize: '1rem', fontWeight: 600, letterSpacing: '0.1em' }}>
                 RECENT<br />PUBLICATIONS
               </h2>
 
