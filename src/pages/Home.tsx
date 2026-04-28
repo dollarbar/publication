@@ -11,41 +11,44 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Main content - left side */}
             <div className="lg:col-span-2 relative">
-              {/* Page Number - Top Left */}
+              {/* Page Number - Top Left
               <div className="absolute top-0 left-0">
                 <p className="text-xs tracking-wider text-gray-600" style={{ fontFamily: 'Cinzel, serif' }}>
                   PAGE 1
                 </p>
               </div>
-
+              */}
               {/* Ornamental top */}
+              {/*
               <div className="flex justify-center mb-8">
                 <MainSeal />
                   
               </div>
+              */}
 
               {/* Title */}
-              <h1 className="text-center mb-4" style={{ fontFamily: 'Cinzel, serif', fontSize: '3rem', fontWeight: 700, lineHeight: '1.2' }}>
-                ORTHODOX
-                <br />
-                PUBLICATION
-              </h1>
+              
+                <h1 className="mb-4" style={{ fontFamily: 'Cinzel, serif', fontSize: '3rem', fontWeight: 700, lineHeight: '1.2' }}>
+                  THE IDIOT
+                </h1>
 
-              {/* Author */}
-              <p className="text-center mb-8 text-sm tracking-widest text-gray-700" style={{ fontFamily: 'Cinzel, serif' }}>
-                BY FATHER JOHN CHRYSOSTOM
-              </p>
+                {/* Author */}
+                <p className="ml-6 mb-8 text-sm tracking-widest text-gray-700" style={{ fontFamily: 'Cinzel, serif' }}>
+                  BY RUBLEV PUBLICATIONS
+                </p>
+              
 
               {/* Decorative line */}
+              {/*
               <div className="flex items-center justify-center mb-8">
                 <div className="h-px bg-black w-24"></div>
                 <div className="mx-4 text-2xl">✦</div>
                 <div className="h-px bg-black w-24"></div>
               </div>
-
+              */}
               {/* Subtitle */}
-              <p className="text-center mb-12 text-lg tracking-widest" style={{ fontFamily: 'Cinzel, serif' }}>
-                IN NOMINE PATRIS
+              <p className="text-center mt-12 mb-12 text-lg tracking-widest" style={{ fontFamily: 'Cinzel, serif' }}>
+                INTRODUCTION TO PURPOSE
               </p>
 
               {/* Body text */}
@@ -69,19 +72,25 @@ export default function Home() {
               </p>
 
               {/* Bottom decorative element */}
+              {/*
               <div className="flex items-center justify-center mt-12">
                 <div className="h-px bg-black w-16"></div>
                 <div className="mx-4 text-xl">✦</div>
                 <div className="h-px bg-black w-16"></div>
               </div>
+              */}
 
               {/* Footer */}
-              <p className="text-center mt-8 text-sm tracking-widest" style={{ fontFamily: 'Cinzel, serif' }}>
+              {/*<p className="text-center mt-8 text-sm tracking-widest" style={{ fontFamily: 'Cinzel, serif' }}>
                 ANNO DOMINI MMXXVI
               </p>
-
+              */}
+              <div className="flex justify-center mb-5">
+                <MainSeal />
+                  
+              </div>
               {/* Pages */}
-              <div className="flex items-center justify-center mt-6 gap-4">
+              <div className="flex items-center justify-center mt-2 gap-4">
                 <button className="text-gray-600 hover:text-black transition-colors" aria-label="Previous page">
                   <span className="text-xl">←</span>
                 </button>
